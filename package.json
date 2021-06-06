@@ -13,9 +13,6 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "npm run lint:fix",
@@ -30,10 +27,13 @@
     "@ant-design/icons": "^4.6.2",
     "@ant-design/pro-layout": "^6.19.3",
     "@ant-design/pro-table": "^2.39.2",
+    "ace-builds": "^1.4.12",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
+    "file-loader": "^6.2.0",
     "js-cookie": "^2.2.1",
     "react": "^17.0.1",
+    "react-ace": "^9.4.1",
     "react-dom": "^17.0.1",
     "umi": "^3.3.3"
   },

@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "build:test": "cross-env UMI_ENV=test umi build",
+    "build:release": "cross-env UMI_ENV=release umi build",
+    "build:pre": "cross-env UMI_ENV=pre umi build",
+    "build:production": "cross-env UMI_ENV=production umi build",
+    "lint": "eslint 'src/**/*.{js,jsx,tsx,ts}'",
+    "lint:fix": "eslint 'src/**/*.{js,jsx,tsx,ts}' --fix",
+    "prettier": "prettier --write '**/*.{less,css,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "git add ."
+    ],
+    "*.{less,css,md,json}": [
+      "npm run prettier",
+      "git add ."
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@ant-design/pro-layout": "^6.19.3",
+    "@ant-design/pro-table": "^2.39.2",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "js-cookie": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "umi": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.0.16",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.16.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "typescript": "^4.1.3",
+    "yorkie": "^2.0.0"
+  }
+}

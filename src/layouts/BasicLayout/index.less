@@ -1,0 +1,84 @@
+@import "../../styles/var.less";
+
+.g-basic-layout {
+  &-header {
+    display: flex;
+
+    &-breadcrumb {
+      .g-basic-layout-header-breadcrumb-item {
+        color: @M4;
+        padding: 0;
+
+        &:active {
+          color: @M4;
+        }
+
+        &:hover {
+          color: @S3;
+          background-color: @M7;
+        }
+
+        &:focus {
+          background-color: @M7;
+        }
+
+        &-active {
+          color: @M2;
+
+          &[disabled],
+          &[disabled]:hover,
+          &[disabled]:focus,
+          &[disabled]:active {
+            color: @M2;
+            cursor: default;
+          }
+        }
+      }
+
+      .g-basic-layout-header-breadcrumb-divider {
+        color: @M4;
+        margin: 0 @Sp-3;
+      }
+    }
+  }
+
+  .ant-pro-sider-logo img {
+    width: 32px;
+    height: 21px;
+  }
+
+  .ant-pro-global-header {
+    background-color: @M7;
+    box-shadow: none;
+  }
+
+  .ant-pro-basicLayout-content {
+    margin: @Sp-5 @Sp-8;
+  }
+
+  .ant-page-header-heading {
+    &-left {
+      margin: 0;
+    }
+
+    &-title {
+      font-size: @Fs-4;
+      line-height: @Lh-4;
+    }
+  }
+
+  .ant-layout {
+    background-color: @M7;
+  }
+
+  .ant-layout-sider,
+  .ant-menu.ant-menu-dark,
+  .ant-menu-dark .ant-menu-sub,
+  .ant-menu.ant-menu-dark .ant-menu-sub {
+    background-color: @S1;
+  }
+
+  .ant-layout-content {
+    min-height: calc(100vh - 72px);
+  }
+}
